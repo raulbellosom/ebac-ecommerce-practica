@@ -56,6 +56,32 @@ img {
   &__logo {
     @include responsive-image(50px);
   }
+
+  &__cart {
+    position: relative;
+    cursor: pointer;
+    @include flex-center(center, center);
+  }
+
+  &__cart-count {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background-color: red;
+    color: $white-color;
+    border-radius: 50%;
+    width: 22px;
+    height: 22px;
+    font-size: 13px;
+    font-weight: $font-weight-bold;
+    line-height: 1;
+    @include flex-center(center, center);
+    display: none;
+    min-width: 22px;
+    text-align: center;
+    padding-top: 4px;
+    box-sizing: border-box;
+  }
 }
 
 /* Banner Block */
@@ -94,6 +120,13 @@ img {
   &__item {
     cursor: pointer;
     text-align: center;
+    padding: 15px;
+    border-radius: 8px;
+    transition: transform 0.2s ease;
+
+    &:hover {
+      transform: translateY(-5px);
+    }
 
     &-image {
       @include responsive-image(200px);
@@ -109,49 +142,136 @@ img {
     &-price {
       font-weight: $font-weight-light;
       font-size: 15px;
+      margin-bottom: 15px;
+    }
+
+    &-btn {
+      width: 100%;
+      padding: 10px 15px;
+      background-color: $primary-color;
+      color: $white-color;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: $base-font-size;
+      font-family: $font-family;
+      transition: background-color 0.2s ease;
+
+      &:hover {
+        background-color: lighten($primary-color, 10%);
+      }
     }
   }
 }
 
 /* Cart Block */
 .cart {
-  width: 300px;
+  width: 350px;
   background-color: $white-color;
-  padding: 25px;
-  height: 100%;
+  padding: 20px;
+  height: 100vh;
   position: fixed;
-  right: 0;
-  top: 100px;
+  right: -350px;
+  top: 0;
   box-shadow: $box-shadow;
+  transition: right 0.3s ease;
+  z-index: 1000;
+  overflow-y: auto;
   @include box-sizing;
 
+  &--active {
+    right: 0;
+  }
+
+  &__header {
+    @include flex-center(space-between, center);
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #eee;
+  }
+
   &__title {
-    width: 100%;
-    text-align: center;
-    font-size: 20px;
+    font-size: 24px;
     font-weight: $font-weight-bold;
-    padding: 25px 0;
+    color: $primary-color;
+  }
+
+  &__close {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 4px;
+    transition: background-color 0.2s ease;
+
+    &:hover {
+      background-color: #f0f0f0;
+    }
+  }
+
+  &__close-icon {
+    width: 24px;
+    height: 24px;
+  }
+
+  &__content {
+    display: block;
+  }
+
+  &__empty {
+    text-align: center;
+    padding: 40px 20px;
+    color: #666;
+    font-style: italic;
   }
 
   &__item {
-    border-bottom: 1px solid $primary-color;
-    @include flex-center(space-between, center);
-    padding: 15px;
+    border-bottom: 1px solid #eee;
+    @include flex-center(space-between, flex-start);
+    padding: 15px 0;
+    gap: 15px;
 
     &-image {
-      @include responsive-image(50px);
+      @include responsive-image(60px);
+      border-radius: 4px;
+    }
+
+    &-info {
+      flex: 1;
+    }
+
+    &-name {
+      font-weight: $font-weight-medium;
+      font-size: 14px;
+      margin-bottom: 5px;
     }
 
     &-price {
-      font-weight: $font-weight-medium;
+      font-weight: $font-weight-bold;
+      color: $primary-color;
+      font-size: 16px;
+    }
+
+    &-quantity {
+      font-size: 12px;
+      color: #666;
     }
 
     &-remove {
-      width: 20px;
+      background: none;
+      border: none;
       cursor: pointer;
+      padding: 5px;
+      border-radius: 4px;
+      transition: background-color 0.2s ease;
+
+      &:hover {
+        background-color: #f0f0f0;
+      }
 
       .cart__delete-icon {
-        @include responsive-image(100%);
+        width: 20px;
+        height: 20px;
       }
     }
   }
@@ -318,8 +438,8 @@ img {
   }
 
   .cart {
-    width: 400px;
-    top: 80px;
+    width: 300px;
+    right: -300px;
   }
 
   .sidebar {
@@ -359,18 +479,21 @@ img {
 
   .cart {
     width: 100%;
-    box-shadow: none;
+    right: -100%;
+    padding: 15px;
 
     &__title {
-      padding: 15px 0;
+      font-size: 20px;
     }
 
     &__item {
       flex-direction: column;
       align-items: center;
+      text-align: center;
+      gap: 10px;
 
       &-image {
-        @include responsive-image(100px);
+        @include responsive-image(80px);
       }
     }
   }

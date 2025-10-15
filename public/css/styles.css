@@ -31,6 +31,34 @@ img {
 .header__logo {
   width: 50px;
 }
+.header__cart {
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header__cart-count {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  background-color: red;
+  color: #fff;
+  border-radius: 50%;
+  width: 22px;
+  height: 22px;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: none;
+  min-width: 22px;
+  text-align: center;
+  padding-top: 4px;
+  box-sizing: border-box;
+}
 
 /* Banner Block */
 .banner {
@@ -66,6 +94,12 @@ img {
 .products__item {
   cursor: pointer;
   text-align: center;
+  padding: 15px;
+  border-radius: 8px;
+  transition: transform 0.2s ease;
+}
+.products__item:hover {
+  transform: translateY(-5px);
 }
 .products__item-image {
   width: 200px;
@@ -79,46 +113,122 @@ img {
 .products__item-price {
   font-weight: 300;
   font-size: 15px;
+  margin-bottom: 15px;
+}
+.products__item-btn {
+  width: 100%;
+  padding: 10px 15px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 15px;
+  font-family: "Lexend", Arial, Helvetica, sans-serif;
+  transition: background-color 0.2s ease;
+}
+.products__item-btn:hover {
+  background-color: rgb(76.5, 76.5, 76.5);
 }
 
 /* Cart Block */
 .cart {
-  width: 300px;
+  width: 350px;
   background-color: #fff;
-  padding: 25px;
-  height: 100%;
+  padding: 20px;
+  height: 100vh;
   position: fixed;
-  right: 0;
-  top: 100px;
+  right: -350px;
+  top: 0;
   box-shadow: -19px -1px 22px -15px rgba(0, 0, 0, 0.3);
+  transition: right 0.3s ease;
+  z-index: 1000;
+  overflow-y: auto;
   box-sizing: border-box;
 }
-.cart__title {
-  width: 100%;
-  text-align: center;
-  font-size: 20px;
-  font-weight: 600;
-  padding: 25px 0;
+.cart--active {
+  right: 0;
 }
-.cart__item {
-  border-bottom: 1px solid #333;
+.cart__header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px;
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #eee;
+}
+.cart__title {
+  font-size: 24px;
+  font-weight: 600;
+  color: #333;
+}
+.cart__close {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+}
+.cart__close:hover {
+  background-color: #f0f0f0;
+}
+.cart__close-icon {
+  width: 24px;
+  height: 24px;
+}
+.cart__content {
+  display: block;
+}
+.cart__empty {
+  text-align: center;
+  padding: 40px 20px;
+  color: #666;
+  font-style: italic;
+}
+.cart__item {
+  border-bottom: 1px solid #eee;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 15px 0;
+  gap: 15px;
 }
 .cart__item-image {
-  width: 50px;
+  width: 60px;
+  border-radius: 4px;
+}
+.cart__item-info {
+  flex: 1;
+}
+.cart__item-name {
+  font-weight: 500;
+  font-size: 14px;
+  margin-bottom: 5px;
 }
 .cart__item-price {
-  font-weight: 500;
+  font-weight: 600;
+  color: #333;
+  font-size: 16px;
+}
+.cart__item-quantity {
+  font-size: 12px;
+  color: #666;
 }
 .cart__item-remove {
-  width: 20px;
+  background: none;
+  border: none;
   cursor: pointer;
+  padding: 5px;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+}
+.cart__item-remove:hover {
+  background-color: #f0f0f0;
 }
 .cart__item-remove .cart__delete-icon {
-  width: 100%;
+  width: 20px;
+  height: 20px;
 }
 
 /* Sidebar Block */
@@ -260,8 +370,8 @@ img {
     width: 150px;
   }
   .cart {
-    width: 400px;
-    top: 80px;
+    width: 300px;
+    right: -300px;
   }
   .sidebar {
     width: 300px;
@@ -292,17 +402,20 @@ img {
   }
   .cart {
     width: 100%;
-    box-shadow: none;
+    right: -100%;
+    padding: 15px;
   }
   .cart__title {
-    padding: 15px 0;
+    font-size: 20px;
   }
   .cart__item {
     flex-direction: column;
     align-items: center;
+    text-align: center;
+    gap: 10px;
   }
   .cart__item-image {
-    width: 100px;
+    width: 80px;
   }
   .sidebar {
     width: 100%;

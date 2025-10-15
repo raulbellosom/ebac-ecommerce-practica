@@ -27,9 +27,12 @@
         ><img src="./img/icon_menu.svg" alt="Icono Menu"
       /></i>
       <img class="header__logo" src="./img/logo.svg" alt="Logo Rabem" />
-      <i class="header__icon"
-        ><img src="./img/icon_cart.svg" alt="Icono Carrito"
-      /></i>
+      <div class="header__cart" id="cart-toggle">
+        <i class="header__icon"
+          ><img src="./img/icon_cart.svg" alt="Icono Carrito"
+        /></i>
+        <span class="header__cart-count" id="cart-count">0</span>
+      </div>
     </header>
 
     <!-- Sidebar Menu -->
@@ -122,6 +125,14 @@
           />
           <h3 class="products__item-title">Playera México 2023</h3>
           <p class="products__item-price">$950.00</p>
+          <button
+            class="products__item-btn"
+            data-product="Playera México 2023"
+            data-price="950.00"
+            data-image="./img/playera.jpg"
+          >
+            Agregar al carrito
+          </button>
         </article>
         <article class="products__item" data-category="jersey">
           <img
@@ -131,6 +142,14 @@
           />
           <h3 class="products__item-title">Jersey México 2023</h3>
           <p class="products__item-price">$1,500.00</p>
+          <button
+            class="products__item-btn"
+            data-product="Jersey México 2023"
+            data-price="1500.00"
+            data-image="./img/jersey.jpg"
+          >
+            Agregar al carrito
+          </button>
         </article>
         <article class="products__item" data-category="sudadera">
           <img
@@ -140,6 +159,14 @@
           />
           <h3 class="products__item-title">Chamarra Adidas Spezial</h3>
           <p class="products__item-price">$2,000.00</p>
+          <button
+            class="products__item-btn"
+            data-product="Chamarra Adidas Spezial"
+            data-price="2000.00"
+            data-image="./img/sudadera.jpg"
+          >
+            Agregar al carrito
+          </button>
         </article>
         <article class="products__item" data-category="camisa">
           <img
@@ -149,6 +176,14 @@
           />
           <h3 class="products__item-title">Camisa Casual Adidas</h3>
           <p class="products__item-price">$2,000.00</p>
+          <button
+            class="products__item-btn"
+            data-product="Camisa Casual Adidas"
+            data-price="2000.00"
+            data-image="./img/camisa.avif"
+          >
+            Agregar al carrito
+          </button>
         </article>
         <article class="products__item" data-category="tenis">
           <img
@@ -158,6 +193,14 @@
           />
           <h3 class="products__item-title">Tenis Carneon</h3>
           <p class="products__item-price">$600.00</p>
+          <button
+            class="products__item-btn"
+            data-product="Tenis Carneon"
+            data-price="600.00"
+            data-image="./img/tenis.jpg"
+          >
+            Agregar al carrito
+          </button>
         </article>
         <article class="products__item" data-category="jersey">
           <img
@@ -167,6 +210,14 @@
           />
           <h3 class="products__item-title">Jersey México 2023</h3>
           <p class="products__item-price">$1,500.00</p>
+          <button
+            class="products__item-btn"
+            data-product="Jersey México 2023"
+            data-price="1500.00"
+            data-image="./img/jersey.jpg"
+          >
+            Agregar al carrito
+          </button>
         </article>
         <article class="products__item" data-category="sudadera">
           <img
@@ -176,6 +227,14 @@
           />
           <h3 class="products__item-title">Chamarra Adidas Spezial</h3>
           <p class="products__item-price">$2,000.00</p>
+          <button
+            class="products__item-btn"
+            data-product="Chamarra Adidas Spezial"
+            data-price="2000.00"
+            data-image="./img/sudadera.jpg"
+          >
+            Agregar al carrito
+          </button>
         </article>
         <article class="products__item" data-category="tenis">
           <img
@@ -185,6 +244,14 @@
           />
           <h3 class="products__item-title">Tenis Carneon</h3>
           <p class="products__item-price">$600.00</p>
+          <button
+            class="products__item-btn"
+            data-product="Tenis Carneon"
+            data-price="600.00"
+            data-image="./img/tenis.jpg"
+          >
+            Agregar al carrito
+          </button>
         </article>
         <article class="products__item" data-category="jersey">
           <img
@@ -194,6 +261,14 @@
           />
           <h3 class="products__item-title">Jersey México 2023</h3>
           <p class="products__item-price">$1,500.00</p>
+          <button
+            class="products__item-btn"
+            data-product="Jersey México 2023"
+            data-price="1500.00"
+            data-image="./img/jersey.jpg"
+          >
+            Agregar al carrito
+          </button>
         </article>
         <article class="products__item" data-category="sudadera">
           <img
@@ -203,6 +278,14 @@
           />
           <h3 class="products__item-title">Chamarra Adidas Spezial</h3>
           <p class="products__item-price">$2,000.00</p>
+          <button
+            class="products__item-btn"
+            data-product="Chamarra Adidas Spezial"
+            data-price="2000.00"
+            data-image="./img/sudadera.jpg"
+          >
+            Agregar al carrito
+          </button>
         </article>
         <article class="products__item" data-category="tenis">
           <img
@@ -212,27 +295,34 @@
           />
           <h3 class="products__item-title">Tenis Carneon</h3>
           <p class="products__item-price">$600.00</p>
+          <button
+            class="products__item-btn"
+            data-product="Tenis Carneon"
+            data-price="600.00"
+            data-image="./img/tenis.jpg"
+          >
+            Agregar al carrito
+          </button>
         </article>
       </section>
 
       <!-- Cart -->
-      <section class="cart">
-        <h2 class="cart__title">Carrito</h2>
-        <div class="cart__item">
-          <img
-            src="./img/playera.jpg"
-            alt="Producto en carrito"
-            class="cart__item-image"
-          />
-          <p class="cart__item-price">$1,700</p>
-          <p class="cart__item-name">Chamarra</p>
-          <i class="cart__item-remove">
+      <section class="cart" id="cart">
+        <div class="cart__header">
+          <h2 class="cart__title">Carrito</h2>
+          <button class="cart__close" id="cart-close">
             <img
-              src="./img/icon_remover.svg"
-              alt="Icono Quitar"
-              class="cart__delete-icon"
+              src="./img/close.svg"
+              alt="Cerrar carrito"
+              class="cart__close-icon"
             />
-          </i>
+          </button>
+        </div>
+        <div class="cart__content" id="cart-content">
+          <!-- Los items del carrito se agregan dinamicamente -->
+        </div>
+        <div class="cart__empty" id="cart-empty">
+          <p>Tu carrito está vacío</p>
         </div>
       </section>
     </main>
