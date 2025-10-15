@@ -17,12 +17,13 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./css/styles.css" />
+    <script src="./js/functions.js"></script>
     <title>Tienda Rabem</title>
   </head>
   <body>
     <!-- Header -->
     <header class="header">
-      <i class="header__icon"
+      <i class="header__icon" id="menu-toggle"
         ><img src="./img/icon_menu.svg" alt="Icono Menu"
       /></i>
       <img class="header__logo" src="./img/logo.svg" alt="Logo Rabem" />
@@ -30,6 +31,79 @@
         ><img src="./img/icon_cart.svg" alt="Icono Carrito"
       /></i>
     </header>
+
+    <!-- Sidebar Menu -->
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar__header">
+        <h2 class="sidebar__title">Menú</h2>
+        <button class="sidebar__close" id="sidebar-close">
+          <img
+            src="./img/close.svg"
+            alt="Cerrar menú"
+            class="sidebar__close-icon"
+          />
+        </button>
+      </div>
+
+      <nav class="sidebar__nav">
+        <section class="sidebar__section">
+          <h3 class="sidebar__section-title">Categorías</h3>
+          <ul class="sidebar__filter-list">
+            <li class="sidebar__filter-item">
+              <button class="sidebar__filter-btn" data-filter="all">
+                Ver todos
+              </button>
+            </li>
+            <li class="sidebar__filter-item">
+              <button class="sidebar__filter-btn" data-filter="jersey">
+                Jersey
+              </button>
+            </li>
+            <li class="sidebar__filter-item">
+              <button class="sidebar__filter-btn" data-filter="sudadera">
+                Sudadera
+              </button>
+            </li>
+            <li class="sidebar__filter-item">
+              <button class="sidebar__filter-btn" data-filter="camisa">
+                Camisa
+              </button>
+            </li>
+            <li class="sidebar__filter-item">
+              <button class="sidebar__filter-btn" data-filter="tenis">
+                Tenis
+              </button>
+            </li>
+            <li class="sidebar__filter-item">
+              <button class="sidebar__filter-btn" data-filter="playera">
+                Playera
+              </button>
+            </li>
+          </ul>
+        </section>
+
+        <section class="sidebar__section">
+          <h3 class="sidebar__section-title">Para quien</h3>
+          <ul class="sidebar__links-list">
+            <li class="sidebar__link-item">
+              <a href="#" class="sidebar__link">Hombres</a>
+            </li>
+            <li class="sidebar__link-item">
+              <a href="#" class="sidebar__link">Mujeres</a>
+            </li>
+            <li class="sidebar__link-item">
+              <a href="#" class="sidebar__link">Niños</a>
+            </li>
+            <li class="sidebar__link-item">
+              <a href="#" class="sidebar__link">Niñas</a>
+            </li>
+          </ul>
+        </section>
+      </nav>
+    </aside>
+
+    <!-- Overlay -->
+    <div class="overlay" id="overlay"></div>
 
     <main>
       <!-- Banner -->
@@ -39,8 +113,17 @@
       </section>
 
       <!-- Products -->
-      <section class="products">
-        <article class="products__item">
+      <section class="products" id="products">
+        <article class="products__item" data-category="playera">
+          <img
+            class="products__item-image"
+            src="./img/playera.jpg"
+            alt="Producto 1"
+          />
+          <h3 class="products__item-title">Playera México 2023</h3>
+          <p class="products__item-price">$950.00</p>
+        </article>
+        <article class="products__item" data-category="jersey">
           <img
             class="products__item-image"
             src="./img/jersey.jpg"
@@ -49,7 +132,7 @@
           <h3 class="products__item-title">Jersey México 2023</h3>
           <p class="products__item-price">$1,500.00</p>
         </article>
-        <article class="products__item">
+        <article class="products__item" data-category="sudadera">
           <img
             class="products__item-image"
             src="./img/sudadera.jpg"
@@ -58,7 +141,16 @@
           <h3 class="products__item-title">Chamarra Adidas Spezial</h3>
           <p class="products__item-price">$2,000.00</p>
         </article>
-        <article class="products__item">
+        <article class="products__item" data-category="camisa">
+          <img
+            class="products__item-image"
+            src="./img/camisa.avif"
+            alt="Producto 4"
+          />
+          <h3 class="products__item-title">Camisa Casual Adidas</h3>
+          <p class="products__item-price">$2,000.00</p>
+        </article>
+        <article class="products__item" data-category="tenis">
           <img
             class="products__item-image"
             src="./img/tenis.jpg"
@@ -67,7 +159,7 @@
           <h3 class="products__item-title">Tenis Carneon</h3>
           <p class="products__item-price">$600.00</p>
         </article>
-        <article class="products__item">
+        <article class="products__item" data-category="jersey">
           <img
             class="products__item-image"
             src="./img/jersey.jpg"
@@ -76,7 +168,7 @@
           <h3 class="products__item-title">Jersey México 2023</h3>
           <p class="products__item-price">$1,500.00</p>
         </article>
-        <article class="products__item">
+        <article class="products__item" data-category="sudadera">
           <img
             class="products__item-image"
             src="./img/sudadera.jpg"
@@ -85,7 +177,7 @@
           <h3 class="products__item-title">Chamarra Adidas Spezial</h3>
           <p class="products__item-price">$2,000.00</p>
         </article>
-        <article class="products__item">
+        <article class="products__item" data-category="tenis">
           <img
             class="products__item-image"
             src="./img/tenis.jpg"
@@ -94,7 +186,7 @@
           <h3 class="products__item-title">Tenis Carneon</h3>
           <p class="products__item-price">$600.00</p>
         </article>
-        <article class="products__item">
+        <article class="products__item" data-category="jersey">
           <img
             class="products__item-image"
             src="./img/jersey.jpg"
@@ -103,7 +195,7 @@
           <h3 class="products__item-title">Jersey México 2023</h3>
           <p class="products__item-price">$1,500.00</p>
         </article>
-        <article class="products__item">
+        <article class="products__item" data-category="sudadera">
           <img
             class="products__item-image"
             src="./img/sudadera.jpg"
@@ -112,7 +204,7 @@
           <h3 class="products__item-title">Chamarra Adidas Spezial</h3>
           <p class="products__item-price">$2,000.00</p>
         </article>
-        <article class="products__item">
+        <article class="products__item" data-category="tenis">
           <img
             class="products__item-image"
             src="./img/tenis.jpg"
