@@ -1,27 +1,13 @@
-// variables.scss
-$primary-color: #333;
-$white-color: #fff;
-$font-family: "Lexend", Arial, Helvetica, sans-serif;
-$base-font-size: 15px;
-$font-weight-light: 300;
-$font-weight-medium: 500;
-$font-weight-bold: 600;
-$banner-bg: url("../img/banner.webp");
-$box-shadow: -19px -1px 22px -15px rgba(0, 0, 0, 0.3);
-
-@mixin box-sizing {
-  box-sizing: border-box;
-}
-
-@mixin flex-center($justify: center, $align: center) {
-  display: flex;
-  justify-content: $justify;
-  align-items: $align;
-}
-
-@mixin responsive-image($width: 100%) {
-  width: $width;
-}
+@import "scss/variables";
+@import "scss/mixins";
+@import "scss/layout/main";
+@import "scss/layout/header";
+@import "scss/components/banner";
+@import "scss/components/products";
+@import "scss/components/cart";
+@import "scss/components/sidebar";
+@import "scss/components/overlay";
+@import "scss/functions";
 
 /* Global Styles */
 body {

@@ -125,14 +125,31 @@
           />
           <h3 class="products__item-title">Playera México 2023</h3>
           <p class="products__item-price">$950.00</p>
-          <button
-            class="products__item-btn"
+          <div
+            class="products__item-actions"
             data-product="Playera México 2023"
             data-price="950.00"
             data-image="./img/playera.jpg"
           >
-            Agregar al carrito
-          </button>
+            <button class="products__item-btn products__item-btn--add">
+              Agregar al carrito
+            </button>
+            <div class="products__item-quantity" style="display: none">
+              <button
+                class="products__item-quantity-btn"
+                data-action="decrease"
+              >
+                <img src="./img/icon_minus.svg" alt="Reducir cantidad" />
+              </button>
+              <span class="products__item-quantity-number">1</span>
+              <button
+                class="products__item-quantity-btn"
+                data-action="increase"
+              >
+                <img src="./img/icon_plus.svg" alt="Aumentar cantidad" />
+              </button>
+            </div>
+          </div>
         </article>
         <article class="products__item" data-category="jersey">
           <img
@@ -142,14 +159,31 @@
           />
           <h3 class="products__item-title">Jersey México 2023</h3>
           <p class="products__item-price">$1,500.00</p>
-          <button
-            class="products__item-btn"
+          <div
+            class="products__item-actions"
             data-product="Jersey México 2023"
             data-price="1500.00"
             data-image="./img/jersey.jpg"
           >
-            Agregar al carrito
-          </button>
+            <button class="products__item-btn products__item-btn--add">
+              Agregar al carrito
+            </button>
+            <div class="products__item-quantity" style="display: none">
+              <button
+                class="products__item-quantity-btn"
+                data-action="decrease"
+              >
+                <img src="./img/icon_minus.svg" alt="Reducir cantidad" />
+              </button>
+              <span class="products__item-quantity-number">1</span>
+              <button
+                class="products__item-quantity-btn"
+                data-action="increase"
+              >
+                <img src="./img/icon_plus.svg" alt="Aumentar cantidad" />
+              </button>
+            </div>
+          </div>
         </article>
         <article class="products__item" data-category="sudadera">
           <img
@@ -159,14 +193,31 @@
           />
           <h3 class="products__item-title">Chamarra Adidas Spezial</h3>
           <p class="products__item-price">$2,000.00</p>
-          <button
-            class="products__item-btn"
+          <div
+            class="products__item-actions"
             data-product="Chamarra Adidas Spezial"
             data-price="2000.00"
             data-image="./img/sudadera.jpg"
           >
-            Agregar al carrito
-          </button>
+            <button class="products__item-btn products__item-btn--add">
+              Agregar al carrito
+            </button>
+            <div class="products__item-quantity" style="display: none">
+              <button
+                class="products__item-quantity-btn"
+                data-action="decrease"
+              >
+                <img src="./img/icon_minus.svg" alt="Reducir cantidad" />
+              </button>
+              <span class="products__item-quantity-number">1</span>
+              <button
+                class="products__item-quantity-btn"
+                data-action="increase"
+              >
+                <img src="./img/icon_plus.svg" alt="Aumentar cantidad" />
+              </button>
+            </div>
+          </div>
         </article>
         <article class="products__item" data-category="camisa">
           <img
@@ -176,14 +227,31 @@
           />
           <h3 class="products__item-title">Camisa Casual Adidas</h3>
           <p class="products__item-price">$2,000.00</p>
-          <button
-            class="products__item-btn"
+          <div
+            class="products__item-actions"
             data-product="Camisa Casual Adidas"
             data-price="2000.00"
             data-image="./img/camisa.avif"
           >
-            Agregar al carrito
-          </button>
+            <button class="products__item-btn products__item-btn--add">
+              Agregar al carrito
+            </button>
+            <div class="products__item-quantity" style="display: none">
+              <button
+                class="products__item-quantity-btn"
+                data-action="decrease"
+              >
+                <img src="./img/icon_minus.svg" alt="Reducir cantidad" />
+              </button>
+              <span class="products__item-quantity-number">1</span>
+              <button
+                class="products__item-quantity-btn"
+                data-action="increase"
+              >
+                <img src="./img/icon_plus.svg" alt="Aumentar cantidad" />
+              </button>
+            </div>
+          </div>
         </article>
         <article class="products__item" data-category="tenis">
           <img
@@ -191,16 +259,135 @@
             src="./img/tenis.jpg"
             alt="Producto 3"
           />
-          <h3 class="products__item-title">Tenis Carneon</h3>
+          <h3 class="products__item-title">Tenis Carneon - Pro</h3>
           <p class="products__item-price">$600.00</p>
-          <button
-            class="products__item-btn"
-            data-product="Tenis Carneon"
+          <div
+            class="products__item-actions"
+            data-product="Tenis Carneon - Pro"
             data-price="600.00"
             data-image="./img/tenis.jpg"
           >
-            Agregar al carrito
-          </button>
+            <button class="products__item-btn products__item-btn--add">
+              Agregar al carrito
+            </button>
+            <div class="products__item-quantity" style="display: none">
+              <button
+                class="products__item-quantity-btn"
+                data-action="decrease"
+              >
+                <img src="./img/icon_minus.svg" alt="Reducir cantidad" />
+              </button>
+              <span class="products__item-quantity-number">1</span>
+              <button
+                class="products__item-quantity-btn"
+                data-action="increase"
+              >
+                <img src="./img/icon_plus.svg" alt="Aumentar cantidad" />
+              </button>
+            </div>
+          </div>
+        </article>
+        <article class="products__item" data-category="jersey">
+          <img
+            class="products__item-image"
+            src="./img/jersey.jpg"
+            alt="Producto 1"
+          />
+          <h3 class="products__item-title">Jersey Edición Limitada</h3>
+          <p class="products__item-price">$1,500.00</p>
+          <div
+            class="products__item-actions"
+            data-product="Jersey Edición Limitada"
+            data-price="1500.00"
+            data-image="./img/jersey.jpg"
+          >
+            <button class="products__item-btn products__item-btn--add">
+              Agregar al carrito
+            </button>
+            <div class="products__item-quantity" style="display: none">
+              <button
+                class="products__item-quantity-btn"
+                data-action="decrease"
+              >
+                <img src="./img/icon_minus.svg" alt="Reducir cantidad" />
+              </button>
+              <span class="products__item-quantity-number">1</span>
+              <button
+                class="products__item-quantity-btn"
+                data-action="increase"
+              >
+                <img src="./img/icon_plus.svg" alt="Aumentar cantidad" />
+              </button>
+            </div>
+          </div>
+        </article>
+        <article class="products__item" data-category="sudadera">
+          <img
+            class="products__item-image"
+            src="./img/sudadera.jpg"
+            alt="Producto 2"
+          />
+          <h3 class="products__item-title">Chamarra Edición Limitada</h3>
+          <p class="products__item-price">$2,000.00</p>
+          <div
+            class="products__item-actions"
+            data-product="Chamarra Edición Limitada"
+            data-price="2000.00"
+            data-image="./img/sudadera.jpg"
+          >
+            <button class="products__item-btn products__item-btn--add">
+              Agregar al carrito
+            </button>
+            <div class="products__item-quantity" style="display: none">
+              <button
+                class="products__item-quantity-btn"
+                data-action="decrease"
+              >
+                <img src="./img/icon_minus.svg" alt="Reducir cantidad" />
+              </button>
+              <span class="products__item-quantity-number">1</span>
+              <button
+                class="products__item-quantity-btn"
+                data-action="increase"
+              >
+                <img src="./img/icon_plus.svg" alt="Aumentar cantidad" />
+              </button>
+            </div>
+          </div>
+        </article>
+        <article class="products__item" data-category="tenis">
+          <img
+            class="products__item-image"
+            src="./img/tenis.jpg"
+            alt="Producto 3"
+          />
+          <h3 class="products__item-title">Tenis Edición Limitada</h3>
+          <p class="products__item-price">$600.00</p>
+          <div
+            class="products__item-actions"
+            data-product="Tenis Carneon - Edición Limitada"
+            data-price="600.00"
+            data-image="./img/tenis.jpg"
+          >
+            <button class="products__item-btn products__item-btn--add">
+              Agregar al carrito
+            </button>
+            <div class="products__item-quantity" style="display: none">
+              <button
+                class="products__item-quantity-btn"
+                data-action="decrease"
+              >
+                <img src="./img/icon_minus.svg" alt="Reducir cantidad" />
+              </button>
+              <span class="products__item-quantity-number">1</span>
+              <button
+                class="products__item-quantity-btn"
+                data-action="increase"
+              >
+                <img src="./img/icon_plus.svg" alt="Aumentar cantidad" />
+              </button>
+            </div>
+          </div>
         </article>
         <article class="products__item" data-category="jersey">
           <img
@@ -210,14 +397,31 @@
           />
           <h3 class="products__item-title">Jersey México 2023</h3>
           <p class="products__item-price">$1,500.00</p>
-          <button
-            class="products__item-btn"
+          <div
+            class="products__item-actions"
             data-product="Jersey México 2023"
             data-price="1500.00"
             data-image="./img/jersey.jpg"
           >
-            Agregar al carrito
-          </button>
+            <button class="products__item-btn products__item-btn--add">
+              Agregar al carrito
+            </button>
+            <div class="products__item-quantity" style="display: none">
+              <button
+                class="products__item-quantity-btn"
+                data-action="decrease"
+              >
+                <img src="./img/icon_minus.svg" alt="Reducir cantidad" />
+              </button>
+              <span class="products__item-quantity-number">1</span>
+              <button
+                class="products__item-quantity-btn"
+                data-action="increase"
+              >
+                <img src="./img/icon_plus.svg" alt="Aumentar cantidad" />
+              </button>
+            </div>
+          </div>
         </article>
         <article class="products__item" data-category="sudadera">
           <img
@@ -227,14 +431,31 @@
           />
           <h3 class="products__item-title">Chamarra Adidas Spezial</h3>
           <p class="products__item-price">$2,000.00</p>
-          <button
-            class="products__item-btn"
+          <div
+            class="products__item-actions"
             data-product="Chamarra Adidas Spezial"
             data-price="2000.00"
             data-image="./img/sudadera.jpg"
           >
-            Agregar al carrito
-          </button>
+            <button class="products__item-btn products__item-btn--add">
+              Agregar al carrito
+            </button>
+            <div class="products__item-quantity" style="display: none">
+              <button
+                class="products__item-quantity-btn"
+                data-action="decrease"
+              >
+                <img src="./img/icon_minus.svg" alt="Reducir cantidad" />
+              </button>
+              <span class="products__item-quantity-number">1</span>
+              <button
+                class="products__item-quantity-btn"
+                data-action="increase"
+              >
+                <img src="./img/icon_plus.svg" alt="Aumentar cantidad" />
+              </button>
+            </div>
+          </div>
         </article>
         <article class="products__item" data-category="tenis">
           <img
@@ -244,65 +465,31 @@
           />
           <h3 class="products__item-title">Tenis Carneon</h3>
           <p class="products__item-price">$600.00</p>
-          <button
-            class="products__item-btn"
+          <div
+            class="products__item-actions"
             data-product="Tenis Carneon"
             data-price="600.00"
             data-image="./img/tenis.jpg"
           >
-            Agregar al carrito
-          </button>
-        </article>
-        <article class="products__item" data-category="jersey">
-          <img
-            class="products__item-image"
-            src="./img/jersey.jpg"
-            alt="Producto 1"
-          />
-          <h3 class="products__item-title">Jersey México 2023</h3>
-          <p class="products__item-price">$1,500.00</p>
-          <button
-            class="products__item-btn"
-            data-product="Jersey México 2023"
-            data-price="1500.00"
-            data-image="./img/jersey.jpg"
-          >
-            Agregar al carrito
-          </button>
-        </article>
-        <article class="products__item" data-category="sudadera">
-          <img
-            class="products__item-image"
-            src="./img/sudadera.jpg"
-            alt="Producto 2"
-          />
-          <h3 class="products__item-title">Chamarra Adidas Spezial</h3>
-          <p class="products__item-price">$2,000.00</p>
-          <button
-            class="products__item-btn"
-            data-product="Chamarra Adidas Spezial"
-            data-price="2000.00"
-            data-image="./img/sudadera.jpg"
-          >
-            Agregar al carrito
-          </button>
-        </article>
-        <article class="products__item" data-category="tenis">
-          <img
-            class="products__item-image"
-            src="./img/tenis.jpg"
-            alt="Producto 3"
-          />
-          <h3 class="products__item-title">Tenis Carneon</h3>
-          <p class="products__item-price">$600.00</p>
-          <button
-            class="products__item-btn"
-            data-product="Tenis Carneon"
-            data-price="600.00"
-            data-image="./img/tenis.jpg"
-          >
-            Agregar al carrito
-          </button>
+            <button class="products__item-btn products__item-btn--add">
+              Agregar al carrito
+            </button>
+            <div class="products__item-quantity" style="display: none">
+              <button
+                class="products__item-quantity-btn"
+                data-action="decrease"
+              >
+                <img src="./img/icon_minus.svg" alt="Reducir cantidad" />
+              </button>
+              <span class="products__item-quantity-number">1</span>
+              <button
+                class="products__item-quantity-btn"
+                data-action="increase"
+              >
+                <img src="./img/icon_plus.svg" alt="Aumentar cantidad" />
+              </button>
+            </div>
+          </div>
         </article>
       </section>
 
@@ -323,6 +510,11 @@
         </div>
         <div class="cart__empty" id="cart-empty">
           <p>Tu carrito está vacío</p>
+        </div>
+        <div class="cart__actions" id="cart-actions" style="display: none">
+          <button class="cart__clear-btn" id="cart-clear">
+            Vaciar carrito
+          </button>
         </div>
       </section>
     </main>

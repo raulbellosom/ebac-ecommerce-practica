@@ -1,0 +1,21 @@
+.banner {
+  width: 100%;
+  padding: 60px 0;
+  text-align: center;
+  background: $banner-bg no-repeat center/cover;
+  color: $white-color;
+  @include box-sizing;
+
+  &__title {
+    font-weight: $font-weight-bold;
+    font-size: 30px;
+    margin: 10px;
+  }
+
+  &__description {
+    width: 100%;
+    margin: 0 auto;
+    font-size: 25px;
+    opacity: 0.7;
+  }
+}

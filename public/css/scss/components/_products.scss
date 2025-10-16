@@ -1,0 +1,138 @@
+.products {
+  width: 90%;
+  margin: 0 auto;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 280px));
+  gap: 20px;
+  justify-content: center;
+  @include box-sizing;
+
+  // Responsive para móvil
+  @media (max-width: 768px) {
+    width: 95%;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 15px;
+  }
+
+  @media (max-width: 480px) {
+    width: 100%;
+    grid-template-columns: 1fr;
+    gap: 15px;
+    padding: 10px;
+  }
+
+  &__item {
+    cursor: pointer;
+    text-align: center;
+    padding: 15px;
+    border-radius: 8px;
+    @include transition(transform);
+    background-color: $white-color;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    max-width: 280px;
+    margin: 0 auto;
+
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    }
+
+    // Responsive para móvil
+    @media (max-width: 768px) {
+      padding: 15px;
+    }
+
+    @media (max-width: 480px) {
+      padding: 15px;
+      margin: 0 10px;
+    }
+
+    &-image {
+      @include responsive-image(200px);
+      margin: 0 auto 15px auto;
+      display: block;
+      max-width: 200px;
+      height: 160px;
+      object-fit: cover;
+      border-radius: 4px;
+
+      @media (max-width: 480px) {
+        @include responsive-image(150px);
+        height: 130px;
+      }
+    }
+
+    &-title {
+      font-weight: $font-weight-medium;
+      font-size: 17px;
+      margin-bottom: 5px;
+    }
+
+    &-price {
+      font-weight: $font-weight-light;
+      font-size: 15px;
+      margin-bottom: 15px;
+    }
+
+    &-actions {
+      max-width: 250px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+    }
+
+    &-btn {
+      width: 100%;
+      max-width: 200px;
+      padding: 12px 20px;
+      font-size: $base-font-size;
+      @include button-style;
+
+      &--add {
+        margin-bottom: 10px;
+      }
+    }
+
+    &-quantity {
+      @include flex-center(center, center);
+      gap: 15px;
+      margin-top: 10px;
+
+      &-btn {
+        background-color: $white-color;
+        border: 1px solid $border-color;
+        border-radius: 50%;
+        width: 35px;
+        height: 35px;
+        cursor: pointer;
+        @include flex-center(center, center);
+        @include transition;
+
+        &:hover {
+          background-color: $hover-color;
+          border-color: $primary-color;
+        }
+
+        &:disabled {
+          opacity: 0.5;
+          cursor: not-allowed;
+        }
+
+        img {
+          width: 18px;
+          height: 18px;
+        }
+      }
+
+      &-number {
+        font-weight: $font-weight-medium;
+        font-size: 18px;
+        min-width: 40px;
+        text-align: center;
+      }
+    }
+  }
+}

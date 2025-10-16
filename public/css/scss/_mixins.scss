@@ -1,0 +1,31 @@
+@mixin box-sizing {
+  box-sizing: border-box;
+}
+
+@mixin flex-center($justify: center, $align: center) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+@mixin responsive-image($width: 100%) {
+  width: $width;
+}
+
+@mixin button-style($bg-color: $primary-color, $text-color: $white-color) {
+  background-color: $bg-color;
+  color: $text-color;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: $font-family;
+  transition: all 0.2s ease;
+
+  &:hover {
+    background-color: lighten($bg-color, 10%);
+  }
+}
+
+@mixin transition($property: all, $duration: 0.2s, $timing: ease) {
+  transition: $property $duration $timing;
+}

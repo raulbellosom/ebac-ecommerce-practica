@@ -1,0 +1,10 @@
+body {
+  width: 100%;
+  font-size: $base-font-size;
+  font-weight: $font-weight-light;
+  font-family: $font-family;
+}
+
+img {
+  @include responsive-image(100px);
+}
