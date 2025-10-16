@@ -5,6 +5,15 @@ body {
   font-family: $font-family;
 }
 
+main {
+  width: 100%;
+  min-height: calc(100vh - 90px);
+
+  @media (max-width: 768px) {
+    min-height: calc(100vh - 70px);
+  }
+}
+
 img {
   @include responsive-image(100px);
 }
